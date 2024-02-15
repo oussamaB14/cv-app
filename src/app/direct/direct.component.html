@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1
+      [ngStyle]="{
+        backgroundColor: bgColor,
+        color: textColor,
+        fontSize: textSize,
+        fontFamily: textFont
+      }"
+    >
+      {{ input }}
+    </h1>
+    <label for="">Input text</label>
+    <input [(ngModel)]="input" type="text" class="form-control" />
+    <label for="">Background Color</label>
+    <input [(ngModel)]="bgColor" type="text" class="form-control" />
+
+    <label for="">Text Color</label>
+    <input [(ngModel)]="textColor" type="text" class="form-control" />
+
+    <label for="">Text Size</label>
+    <input #sz (change)="changeSize()" type="number" class="form-control" />
+    <select [(ngModel)]="textFont" class="form-control">
+      <option value=""></option>
+      <option value="garamond">Garamond</option>
+      <option value="phosphate">Phosphate</option>
+      <option value="arial">Arial</option>
+    </select>
+  </div>
+</div>

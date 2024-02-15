@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <h1>{{ oneAccount.name }}</h1>
+    <hr />
+    <p>This account is {{ oneAccount.status }}</p>
+    <button
+      (click)="changeStatus('active')"
+      [disabled]="oneAccount.status == 'active'"
+      class="btn btn-success"
+    >
+      Set to active
+    </button>
+    <button
+      (click)="changeStatus('inactive')"
+      [disabled]="oneAccount.status == 'inactive'"
+      class="btn btn-danger"
+    >
+      Set to inactive
+    </button>
+    <button
+      (click)="changeStatus('unknown')"
+      [disabled]="oneAccount.status == 'unknown'"
+      class="btn btn-primary"
+    >
+      Set to unknown
+    </button>
+  </div>
+</div>

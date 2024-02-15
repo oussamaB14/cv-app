@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="col-md-12">
+    <app-account-form (AccToHome)="addNewAccount($event)"></app-account-form>
+    <hr />
+    @for( acc of tabAccounts; track $index){
+    <app-account-item [oneAccount]="acc"></app-account-item>
+    }
+  </div>
+</div>
