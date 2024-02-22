@@ -17,6 +17,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { ShortPipe } from './pipes/short.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { NoAvatarPipe } from './pipes/no-avatar.pipe';
+import { CustomDirDirective } from './custom-dir.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NoAvatarPipe } from './pipes/no-avatar.pipe';
     ShortPipe,
     FilterPipe,
     NoAvatarPipe,
+    CustomDirDirective
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
